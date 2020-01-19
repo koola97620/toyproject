@@ -3,6 +3,7 @@ package me.jdragon.toy.controller;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URI;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -43,9 +44,15 @@ class MultipartControllerTest {
   void setUp() {
     try {
       createMultipartFile();
+      printFile();
+      // test.txt 출력하는 코드도 작성해보기
     } catch(IOException e) {
 
     }
+
+  }
+
+  private void printFile() throws IOException {
 
   }
 
