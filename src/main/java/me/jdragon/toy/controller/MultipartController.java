@@ -33,6 +33,10 @@ public class MultipartController {
   @GetMapping("/two")
   public ResponseEntity twoParameter(@RequestParam RequestDTO requestDTO, String str) {
 
+    System.out.println(requestDTO.getName());
+    System.out.println(requestDTO.getAge());
+    System.out.println(str);
+
     return ResponseEntity.ok().build();
 
   }
