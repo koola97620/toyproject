@@ -1,6 +1,7 @@
 package me.jdragon.toy.controller;
 
 import java.io.InputStream;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Component;
@@ -15,7 +16,7 @@ import org.springframework.stereotype.Component;
 public class FileConverter {
 
   public List<Map<Integer,Object>> convert(InputStream inputStream) {
-    return null;
+    return Collections.emptyList();
   }
 
 }

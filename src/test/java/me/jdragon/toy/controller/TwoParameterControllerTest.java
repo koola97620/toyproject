@@ -1,5 +1,6 @@
 package me.jdragon.toy.controller;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 
@@ -34,15 +35,38 @@ class TwoParameterControllerTest {
     requestDTO.setAge(100);
     requestDTO.setName("haha");
 
-    mockMvc.perform(post(URI.create("two"))
+    mockMvc.perform(post(URI.create("/two"))
       .contentType(MediaType.APPLICATION_JSON)
       .accept(MediaType.APPLICATION_JSON)
       .characterEncoding("utf-8")
-      .content(objectMapper.writeValueAsBytes(requestDTO))
+//      .content(objectMapper.writeValueAsBytes(requestDTO))
+      .content(" {\"name\": \"haha\" , \"age\": 30 } ")
+//      .content(" {requestDTO : [\"name\": \"haha\" , \"age\": 30 ] } ")
+//      .content(" {\"requestDTO\" : [ \"name\": \"haha\" , \"age\": 30 ] , \"str\" : \"kiki\"  } ")
 //        .content("str")
     )
       .andDo(print())
     ;
   }
 
+  @Test
+  public void given_two_parameters_getMethod() throws Exception {
+    RequestDTO requestDTO = new RequestDTO();
+    requestDTO.setAge(100);
+    requestDTO.setName("haha");
+
+    mockMvc.perform(get(URI.create("/twoget"))
+            .contentType(MediaType.APPLICATION_JSON)
+            .accept(MediaType.APPLICATION_JSON)
+            .characterEncoding("utf-8")
+//      .content(objectMapper.writeValueAsBytes(requestDTO))
+            .content(" {\"name\": \"haha\" , \"age\": 30 } ")
+        .param("str", "kakaka")
+//      .content(" {requestDTO : [\"name\": \"haha\" , \"age\": 30 ] } ")
+//      .content(" {\"requestDTO\" : [ \"name\": \"haha\" , \"age\": 30 ] , \"str\" : \"kiki\"  } ")
+//        .content("str")
+    )
+        .andDo(print())
+    ;
+  }
 }
