@@ -21,10 +21,7 @@ public class PayTest {
 
   @BeforeEach
   void setUp() {
-    //payService = new PayService(payRepository, payCalculator);
-    PayInfo payInfo = new PayInfo(100L, 100_000);
-    payRepository.savePay(payInfo);
-
+    payRepository.savePay(new PayInfo(100L, 100_000));
     payService = new PayService(payRepository, payCalculator);
   }
 
@@ -44,7 +41,7 @@ public class PayTest {
   }
 
   @Test
-  public void test3() {
+  public void given_purchase_no_then_calculate_pay_total_price() {
     Long purchase_no = 100L;
     Integer calculateTotalPurchaseAmount = payService.calculateTotalPurchaseAmount(purchase_no);
     assertThat(calculateTotalPurchaseAmount).isEqualTo(150_000);
