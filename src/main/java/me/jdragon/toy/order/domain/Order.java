@@ -1,5 +1,6 @@
 package me.jdragon.toy.order.domain;
 
+import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import lombok.Getter;
@@ -17,5 +18,8 @@ public class Order {
 
   @Id
   private Long id;
+  private Orderer orderer;
+  private Integer productId;
+  private LocalDateTime orderDate;
 
 }

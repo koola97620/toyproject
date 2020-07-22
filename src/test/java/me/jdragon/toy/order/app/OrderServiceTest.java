@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
  * @description
  */
 class OrderServiceTest {
-  private OrderService orderService = mock(OrderService.class);
+  //private OrderService orderService = mock(OrderService.class);
 
   @BeforeEach
   public void setUp() {
