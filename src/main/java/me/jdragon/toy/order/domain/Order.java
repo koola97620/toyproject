@@ -6,5 +6,6 @@ package me.jdragon.toy.order.domain;
  * @description
  */
 public class Order {
+  private Long id;
 
 }
