@@ -1,4 +1,4 @@
-package me.jdragon.toy.controller;
+package me.jdragon.toy.multitest;
 
 import lombok.Getter;
 import lombok.Setter;

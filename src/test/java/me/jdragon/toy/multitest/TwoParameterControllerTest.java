@@ -1,4 +1,4 @@
-package me.jdragon.toy.controller;
+package me.jdragon.toy.multitest;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
