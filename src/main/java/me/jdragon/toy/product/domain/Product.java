@@ -1,4 +1,4 @@
-package me.jdragon.toy.product;
+package me.jdragon.toy.product.domain;
 
 import lombok.Getter;
 
