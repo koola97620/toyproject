@@ -1,6 +1,7 @@
 package me.jdragon.toy.product.domain;
 
 import lombok.Getter;
+import org.springframework.data.annotation.Id;
 
 /**
  * @author choijaeyong on 2020/07/24.
@@ -10,5 +11,7 @@ import lombok.Getter;
 
 @Getter
 public class Product {
+  @Id
+  private Integer id;
 
 }

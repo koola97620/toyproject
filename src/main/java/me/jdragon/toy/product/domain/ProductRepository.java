@@ -12,6 +12,8 @@ import org.springframework.data.repository.Repository;
 
 
 public interface ProductRepository extends Repository<Product,Integer> {
-
+  Product findById(Integer id);
+  Product save(Product product);
+  Product deleteById(Integer id);
 
 }
