@@ -13,5 +13,7 @@ import org.springframework.data.annotation.Id;
 public class Product {
   @Id
   private Integer id;
+  private String name;
+
 
 }
